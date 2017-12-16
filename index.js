@@ -44,8 +44,8 @@ class Markdown extends Component {
   }
 
   render() {
-    const child = isArray(this.props.children) 
-                ? this.props.children.join('') 
+    const child = isArray(this.props.children)
+                ? this.props.children.join('')
                 : this.props.children;
 
     const tree = this.parse(child);
@@ -61,7 +61,7 @@ Markdown.propTypes = {
   onImageClose: PropTypes.func,
   onLoad: PropTypes.func,
   styles: PropTypes.shape({
-    view: View.propTypes.style,
+    view: PropTypes.any,
   }),
 };
 
